@@ -11,6 +11,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Board" t="Include">
           <e p="Cell.cs" t="Include" />
+          <e p="CPUBoard.cs" t="Include" />
           <e p="IBoard.cs" t="Include" />
         </e>
         <e p="Coordinates.cs" t="Include" />
