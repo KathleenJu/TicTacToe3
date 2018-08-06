@@ -7,7 +7,7 @@ namespace TicTacToe
         public int Id { get; }
         public char Mark { get; private set; }
         
-        public void GetPlayerMark()
+        public void SetPlayerMark()
         {
             var random = new Random();
             int num = random.Next(0, 26); // Zero to 25
@@ -17,7 +17,10 @@ namespace TicTacToe
 
         public Coordinates GetPlayerMove()
         {
-            throw new System.NotImplementedException();
+            var random = new Random();
+            var coord = new Coordinates(random.Next(0, 3), random.Next(0, 3), random.Next(0, 3));
+
+            return coord;
         }
     }
 }

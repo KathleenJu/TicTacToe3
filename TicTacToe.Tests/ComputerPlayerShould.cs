@@ -2,25 +2,24 @@ using Xunit;
 
 namespace TicTacToe.Tests
 {
-    public class PlayerShould
+    public class ComputerPlayerShould
     {
         [Fact]
         public void ReturnTheComputerPlayerMark()
         {
             var player = new ComputerPlayer();
-            player.GetPlayerMark();
+            player.SetPlayerMark();
             
             Assert.NotNull(player.Mark);
         }
         
-        
+       [Fact] 
         public void ReturnTheComputerPlayerMove()
         {
             var player = new ComputerPlayer();
             var coord = player.GetPlayerMove();
-            var actualOutput  = new Coordinates(1, 1, 1);
             
-            Assert.Equal(coord, actualOutput);
+            Assert.NotNull(coord);
         }
     }
 }
