@@ -28,34 +28,21 @@ namespace TicTacToe
             {
                 _playedCells.Add(playerMove);
             }
-
-            // ??
         }
 
         public bool IsEmptyPosition(Coordinates playerCoordinates)
         {
-            var isOccupied = _playedCells.Select(c => c.Coordinates).Any(coord =>
-                coord.X == playerCoordinates.X && coord.Y == playerCoordinates.Y && coord.Z == playerCoordinates.Z);
-            var playerOccupiedBy = _playedCells.Where(cell =>
-                cell.Coordinates.X == playerCoordinates.X && cell.Coordinates.Y == playerCoordinates.Y &&
-                cell.Coordinates.Z == playerCoordinates.Z).Select(c => c.State);
-            if (!isOccupied)
-            {
-                return true;
-            }
+            var position = _playedCells.Where(cell => cell.Coordinates.X == playerCoordinates.X && cell.Coordinates.Y == playerCoordinates.Y &&
+                cell.Coordinates.Z == playerCoordinates.Z);
 
-            throw new BoardPositionIsOccupiedException("Position is already occupied by " + playerOccupiedBy);
+            return !position.Any() ? true : throw new BoardPositionIsOccupiedException("Position is already occupied by " + position.Select(c => c.State));
         }
 
         public bool IsValidCoordinate(Coordinates coordinates)
         {
             var isValidCoordinate = coordinates.X < BoardSize && coordinates.X >= 0 && coordinates.Y < BoardSize &&
-                                           coordinates.Y >= 0;
-            if (isValidCoordinate)
-            {
-                return true;
-            }
-            throw new CoordinateIsOutOfBoundsException("Coordinate is out of bounds.");
+                                    coordinates.Y >= 0;
+            return isValidCoordinate? true : throw new CoordinateIsOutOfBoundsException("Coordinate is out of bounds.");
         }
     }
 }

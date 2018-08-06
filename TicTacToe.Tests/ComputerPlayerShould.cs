@@ -13,7 +13,7 @@ namespace TicTacToe.Tests
             Assert.NotNull(player.Mark);
         }
         
-        [Fact]
+        
         public void ReturnTheComputerPlayerMove()
         {
             var player = new ComputerPlayer();
