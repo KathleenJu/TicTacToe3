@@ -9,9 +9,20 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="TicTacToe" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Cell.cs" t="Include" />
+        <e p="Board" t="Include">
+          <e p="Cell.cs" t="Include" />
+          <e p="IBoard.cs" t="Include" />
+        </e>
         <e p="Coordinates.cs" t="Include" />
-        <e p="IPlayerDisPlayInterface.cs" t="Include" />
+        <e p="DisplayInterface" t="Include">
+          <e p="IDisplayInterface.cs" t="Include" />
+          <e p="IPlayerDisPlayInterface.cs" t="Include" />
+          <e p="PlayerConsoleInterface.cs" t="Include" />
+        </e>
+        <e p="Exceptions" t="Include">
+          <e p="InvalidCoordinateException.cs" t="Include" />
+          <e p="QuitGameException.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
@@ -24,13 +35,13 @@
           <e p="HumanPlayer.cs" t="Include" />
           <e p="IPlayer.cs" t="Include" />
         </e>
-        <e p="PlayerConsoleInterface.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="TicTacToe.csproj" t="IncludeRecursive" />
       </e>
       <e p="TicTacToe.sln" t="IncludeFlat" />
       <e p="TicTacToe.Tests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="ComputerPlayerShould.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
@@ -39,7 +50,6 @@
             </e>
           </e>
         </e>
-        <e p="PlayerShould.cs" t="Include" />
         <e p="TicTacToe.Tests.csproj" t="IncludeRecursive" />
       </e>
     </e>
