@@ -2,15 +2,15 @@
 {
     public class Coordinates
     {
-        public int X { get; } // row
-        public int Y { get; } // column
-        public int Z { get; } // depth?
+        public int Row { get; } // row
+        public int Column { get; } // column
+        public int Depth { get; } // depth?
         
-        public Coordinates(int x, int y, int z)
+        public Coordinates(int row, int column, int depth)
         {
-            X = x;
-            Y = y;
-            Z = z;
+            Row = row;
+            Column = column;
+            Depth = depth;
         }
     }
 }

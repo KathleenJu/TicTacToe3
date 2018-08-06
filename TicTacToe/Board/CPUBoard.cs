@@ -32,16 +32,16 @@ namespace TicTacToe
 
         public bool IsEmptyPosition(Coordinates playerCoordinates)
         {
-            var position = _playedCells.Where(cell => cell.Coordinates.X == playerCoordinates.X && cell.Coordinates.Y == playerCoordinates.Y &&
-                cell.Coordinates.Z == playerCoordinates.Z);
+            var position = _playedCells.Where(cell => cell.Coordinates.Row == playerCoordinates.Row && cell.Coordinates.Column == playerCoordinates.Column &&
+                cell.Coordinates.Depth == playerCoordinates.Depth);
 
             return !position.Any() ? true : throw new BoardPositionIsOccupiedException("Position is already occupied by " + position.Select(c => c.State));
         }
 
         public bool IsValidCoordinate(Coordinates coordinates)
         {
-            var isValidCoordinate = coordinates.X < BoardSize && coordinates.X >= 0 && coordinates.Y < BoardSize &&
-                                    coordinates.Y >= 0;
+            var isValidCoordinate = coordinates.Row < BoardSize && coordinates.Row >= 0 && coordinates.Column < BoardSize &&
+                                    coordinates.Column >= 0;
             return isValidCoordinate? true : throw new CoordinateIsOutOfBoundsException("Coordinate is out of bounds.");
         }
     }

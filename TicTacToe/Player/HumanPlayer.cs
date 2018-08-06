@@ -13,7 +13,7 @@
             DisplayInterface = displayInterface;
         }
 
-        public void SetPlayerMark() // its not returning the playerMark... rename method to setPlayerMark?
+        public void SetPlayerMark() 
         {
             DisplayInterface.DisplayMessage("Player " + Id + " pick your mark on the board e.g. X, O or A: ");
             Mark = DisplayInterface.GetMark();
