@@ -2,6 +2,6 @@
 {
     public interface IPlayerDisPlayInterface
     {
-        
+//        string GetInput();
     }
 }

@@ -7,7 +7,10 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnThePlayerMark()
         {
+            var player = new ComputerPlayer();
+            var coord = player.GetPlayerMark();
             
+            Assert.Equal(coord, 'X');
         }
     }
 }

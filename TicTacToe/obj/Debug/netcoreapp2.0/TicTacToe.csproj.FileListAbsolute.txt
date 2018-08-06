@@ -1,0 +1,11 @@
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/obj/Debug/netcoreapp2.0/TicTacToe.csprojResolveAssemblyReference.cache
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/obj/Debug/netcoreapp2.0/TicTacToe.csproj.CoreCompileInputs.cache
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/obj/Debug/netcoreapp2.0/TicTacToe.AssemblyInfoInputs.cache
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/obj/Debug/netcoreapp2.0/TicTacToe.AssemblyInfo.cs
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/bin/Debug/netcoreapp2.0/TicTacToe.deps.json
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/bin/Debug/netcoreapp2.0/TicTacToe.runtimeconfig.json
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/bin/Debug/netcoreapp2.0/TicTacToe.runtimeconfig.dev.json
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/bin/Debug/netcoreapp2.0/TicTacToe.dll
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/bin/Debug/netcoreapp2.0/TicTacToe.pdb
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/obj/Debug/netcoreapp2.0/TicTacToe.dll
+/Users/kathleen.jumamoy/Projects/Katas/TicTacToe3/TicTacToe/TicTacToe/obj/Debug/netcoreapp2.0/TicTacToe.pdb

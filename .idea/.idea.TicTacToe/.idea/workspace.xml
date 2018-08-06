@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a477fe1e-1aa3-4b12-99da-013f91d52780" name="Default" comment="" />
+    <list default="true" id="a477fe1e-1aa3-4b12-99da-013f91d52780" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.TicTacToe/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe/Cell.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe/Coordinates.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe/Player/ComputerPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe/Player/IPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe/PlayerConsoleInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TicTacToe/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicTacToe/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TicTacToe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicTacToe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Tests/TicTacToe.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Tests/TicTacToe.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Tests/obj/TicTacToe.Tests.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Tests/obj/TicTacToe.Tests.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Tests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Tests/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,57 +29,31 @@
     <favorites_list name="TicTacToe" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1533504635216" expanded="true" signature="34:175" ph="{...}" />
-                <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
-                <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="PlayerShould.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="180">
+              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
               <folding>
-                <marker date="1533506655334" expanded="true" signature="39:175" ph="{...}" />
-                <marker date="1533506655334" expanded="true" signature="71:173" ph="{...}" />
-                <marker date="1533506655334" expanded="true" signature="134:167" ph="{...}" />
+                <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+                <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+                <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/Player.cs">
+      <file leaf-file-name="ComputerPlayer.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTacToe/Player/ComputerPlayer.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+              <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
               <folding>
-                <marker date="1533506795035" expanded="true" signature="19:444" ph="{...}" />
-                <marker date="1533506795035" expanded="true" signature="45:442" ph="{...}" />
-                <marker date="1533506795035" expanded="true" signature="257:372" ph="{...}" />
-                <marker date="1533506795035" expanded="true" signature="403:436" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPlayerDisPlayInterface.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-              <folding>
-                <marker date="1533506795043" expanded="true" signature="19:89" ph="{...}" />
-                <marker date="1533506795043" expanded="true" signature="66:87" ph="{...}" />
+                <marker date="1533512776457" expanded="true" signature="19:379" ph="{...}" />
+                <marker date="1533512776457" expanded="true" signature="63:377" ph="{...}" />
+                <marker date="1533512776457" expanded="true" signature="179:255" ph="{...}" />
+                <marker date="1533512776457" expanded="true" signature="295:371" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -71,20 +61,35 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TicTacToe/PlayerConsoleInterface.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TicTacToe/Cell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TicTacToe/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TicTacToe/Coordinates.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TicTacToe/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TicTacToe/Player/ComputerPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TicTacToe/Player/IPlayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/TicTacToe.Tests/UnitTest1.cs" />
-        <option value="$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs" />
         <option value="$PROJECT_DIR$/TicTacToe/PlayerDisPlayInterface.cs" />
-        <option value="$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe/PlayerConsoleInterface.cs" />
         <option value="$PROJECT_DIR$/TicTacToe/Player.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe/HumanPlayer.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe/Coordinates.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe/Cell.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe/Player/IPlayer.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe/Player/ComputerPlayer.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs" />
       </list>
     </option>
   </component>
@@ -97,12 +102,13 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="-1084" />
     <option name="y" value="-1057" />
     <option name="width" value="1920" />
     <option name="height" value="1057" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -137,6 +143,7 @@
   <component name="PropertiesComponent">
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -150,7 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Default">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -165,6 +172,9 @@
       <option name="PROJECT_KIND" value="None" />
       <option name="PROJECT_TFM" value="" />
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.Default" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -176,12 +186,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533504633168</updated>
-      <workItem from="1533504634707" duration="1381000" />
+      <workItem from="1533504634707" duration="1517000" />
+      <workItem from="1533507093635" duration="37000" />
+      <workItem from="1533507146222" duration="133000" />
+      <workItem from="1533507328613" duration="39000" />
+      <workItem from="1533507384577" duration="27000" />
+      <workItem from="1533507428954" duration="172000" />
+      <workItem from="1533507634409" duration="23000" />
+      <workItem from="1533507678860" duration="30000" />
+      <workItem from="1533507740033" duration="4205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1381000" />
+    <option name="totallyTimeSpent" value="6183000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -193,28 +211,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1084" y="-1057" width="1920" height="1057" extended-state="6" />
+    <frame x="-1084" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32935324" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" order="10" weight="0.32935324" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49895832" visible="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" sideWeight="0.50104165" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32935324" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49850747" visible="true" weight="0.12135417" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" visible="true" weight="0.32935324" />
+      <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Structure" order="1" sideWeight="0.50149256" side_tool="true" weight="0.10364583" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" sideWeight="0.50104165" side_tool="true" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -232,7 +251,288 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <marker date="1533504635216" expanded="true" signature="34:175" ph="{...}" />
+            <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
+            <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <marker date="1533512755532" expanded="true" signature="19:542" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="60:540" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="267:337" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="374:418" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="458:534" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1533512025313" expanded="true" signature="19:109" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="66:107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
+            <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <marker date="1533512755532" expanded="true" signature="19:542" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="60:540" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="267:337" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="374:418" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="458:534" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1533512025313" expanded="true" signature="19:109" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="66:107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding>
+            <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
+            <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <marker date="1533512755532" expanded="true" signature="19:542" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="60:540" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="267:337" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="374:418" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="458:534" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1533512025313" expanded="true" signature="19:109" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="66:107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
+            <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <marker date="1533512755532" expanded="true" signature="19:542" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="60:540" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="267:337" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="374:418" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="458:534" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1533512025313" expanded="true" signature="19:109" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="66:107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
+            <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <marker date="1533512755532" expanded="true" signature="19:542" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="60:540" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="267:337" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="374:418" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="458:534" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1533512025313" expanded="true" signature="19:109" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="66:107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
+            <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <marker date="1533512755532" expanded="true" signature="19:542" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="60:540" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="267:337" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="374:418" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="458:534" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1533512025313" expanded="true" signature="19:109" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="66:107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
             <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
             <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
           </folding>
@@ -244,33 +544,187 @@
         <state relative-caret-position="135">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
           <folding>
-            <marker date="1533506655334" expanded="true" signature="39:175" ph="{...}" />
-            <marker date="1533506655334" expanded="true" signature="71:173" ph="{...}" />
-            <marker date="1533506655334" expanded="true" signature="134:167" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <marker date="1533512755532" expanded="true" signature="19:542" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="60:540" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="267:337" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="374:418" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="458:534" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="90">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding>
-            <marker date="1533506795043" expanded="true" signature="19:89" ph="{...}" />
-            <marker date="1533506795043" expanded="true" signature="66:87" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="19:109" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="66:107" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/Player.cs">
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
+            <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <marker date="1533512755532" expanded="true" signature="19:542" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="60:540" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="267:337" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="374:418" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="458:534" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <marker date="1533512025313" expanded="true" signature="19:109" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="66:107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1533504635216" expanded="true" signature="54:173" ph="{...}" />
+            <marker date="1533504635216" expanded="true" signature="100:167" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/PlayerConsoleInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding>
+            <marker date="1533508972991" expanded="true" signature="19:110" ph="{...}" />
+            <marker date="1533508972991" expanded="true" signature="87:108" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/IPlayerDisPlayInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <marker date="1533512025313" expanded="true" signature="19:109" ph="{...}" />
+            <marker date="1533512025313" expanded="true" signature="66:107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Coordinates.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <marker date="1533512402486" expanded="true" signature="19:315" ph="{...}" />
+            <marker date="1533512402486" expanded="true" signature="50:313" ph="{...}" />
+            <marker date="1533512402486" expanded="true" signature="230:307" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Cell.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <marker date="1533512540864" expanded="true" signature="19:292" ph="{...}" />
+            <marker date="1533512540864" expanded="true" signature="43:290" ph="{...}" />
+            <marker date="1533512540864" expanded="true" signature="198:284" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/IPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <marker date="1533512625910" expanded="true" signature="19:127" ph="{...}" />
+            <marker date="1533512625910" expanded="true" signature="50:125" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/HumanPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding>
+            <marker date="1533512755532" expanded="true" signature="19:542" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="60:540" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="267:337" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="374:418" ph="{...}" />
+            <marker date="1533512755532" expanded="true" signature="458:534" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Tests/PlayerShould.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
-            <marker date="1533506795035" expanded="true" signature="19:444" ph="{...}" />
-            <marker date="1533506795035" expanded="true" signature="45:442" ph="{...}" />
-            <marker date="1533506795035" expanded="true" signature="257:372" ph="{...}" />
-            <marker date="1533506795035" expanded="true" signature="403:436" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="39:308" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="71:306" ph="{...}" />
+            <marker date="1533512845623" expanded="true" signature="134:300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Player/ComputerPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding>
+            <marker date="1533512776457" expanded="true" signature="19:379" ph="{...}" />
+            <marker date="1533512776457" expanded="true" signature="63:377" ph="{...}" />
+            <marker date="1533512776457" expanded="true" signature="179:255" ph="{...}" />
+            <marker date="1533512776457" expanded="true" signature="295:371" ph="{...}" />
           </folding>
         </state>
       </provider>
