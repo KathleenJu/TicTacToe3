@@ -5,12 +5,22 @@ namespace TicTacToe.Tests
     public class PlayerShould
     {
         [Fact]
-        public void ReturnThePlayerMark()
+        public void ReturnTheComputerPlayerMark()
         {
             var player = new ComputerPlayer();
-            var coord = player.GetPlayerMark();
+            player.GetPlayerMark();
             
-            Assert.Equal(coord, 'X');
+            Assert.NotNull(player.Mark);
+        }
+        
+        [Fact]
+        public void ReturnTheComputerPlayerMove()
+        {
+            var player = new ComputerPlayer();
+            var coord = player.GetPlayerMove();
+            var actualOutput  = new Coordinates(1, 1, 1);
+            
+            Assert.Equal(coord, actualOutput);
         }
     }
 }

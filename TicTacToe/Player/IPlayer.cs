@@ -2,7 +2,7 @@
 {
     public interface IPlayer
     {
-        char GetPlayerMark();
-        Coordinates MakeAMove();
+        void GetPlayerMark();
+        Coordinates GetPlayerMove();
     }
 }

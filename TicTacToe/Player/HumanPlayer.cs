@@ -3,23 +3,26 @@
     public class HumanPlayer : IPlayer
     {
         public int Id { get; }
-        public char Mark { get; }
+        public char Mark { get; private set; }
         
-        public IPlayerDisPlayInterface DisplayInterface;
+        public IPlayerDisplayInterface DisplayInterface;
 
-        public HumanPlayer(IPlayerDisPlayInterface displayInterface)
+        public HumanPlayer(IPlayerDisplayInterface displayInterface)
         { 
             DisplayInterface = displayInterface;
         }
 
-        public char GetPlayerMark()
+        public void GetPlayerMark()
         {
-            return 'X';
+            DisplayInterface.DisplayMessage("Player " + Id + " pick your mark on the board e.g. X, O or A: ");
+            DisplayInterface.GetInput();
+//            Mark = 'X';
         }
 
-        public Coordinates MakeAMove()
+        public Coordinates GetPlayerMove()
         {
-            throw new System.NotImplementedException();
+            DisplayInterface.DisplayMessage("Player " + Id + "enter a coord x,y,z to place " + Mark + " or enter 'q' to give up: ");
+            DisplayInterface.GetInput();
         }
     }
 }
