@@ -2,9 +2,9 @@
 {
     public class Coordinates
     {
-        public int Row { get; } // row
-        public int Column { get; } // column
-        public int Depth { get; } // depth?
+        public int Row { get; } 
+        public int Column { get; } 
+        public int Depth { get; } 
         
         public Coordinates(int row, int column, int depth)
         {
