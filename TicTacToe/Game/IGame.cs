@@ -3,11 +3,11 @@
     public interface IGame
     {
         void StartGame();
-        void AddPlayersToGame();
-        void SetCurrentPlayer();
+        void AddPlayersToGame(IPlayer player);
+        void SetCurrentPlayer(IPlayer player);
         void PlayMove(char mark, Coordinates coordinates);
         bool IsGameOver();
-        void GetWinner();
+        IPlayer GetWinner();
         void EndGame();
     }
 }

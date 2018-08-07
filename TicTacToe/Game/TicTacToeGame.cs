@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using TicTacToe.Rules;
 
 namespace TicTacToe
@@ -7,7 +8,7 @@ namespace TicTacToe
     {
         private readonly ITicTacToeRules _ticTacToeRules;
         private readonly ITicTacToeBoard _ticTacToeBoard;
-        private List<IPlayer> _gamePlayers;
+        private readonly List<IPlayer> _gamePlayers;
         private IPlayer _currentGamePlayer;
         private GameStatus _gameStatus;
          
@@ -15,6 +16,7 @@ namespace TicTacToe
         {
             _ticTacToeRules = new TicTacToeRules();
             _ticTacToeBoard = new TicTacToeCPUBoard();
+            _gamePlayers = new List<IPlayer>();
         }
 
         public void StartGame()
@@ -22,14 +24,21 @@ namespace TicTacToe
             _gameStatus = GameStatus.PLAYING;
         }
 
-        public void AddPlayersToGame()
+        public void AddPlayersToGame(IPlayer player)
         {
-            throw new System.NotImplementedException();
+            if (!_gamePlayers.Any(gamePlayer => gamePlayer.GetPlayerMark() == player.GetPlayerMark()))
+            {
+                _gamePlayers.Add(player);
+            }
+            else
+            {
+                throw new System.Exception("Mark is already taken by another player. ");
+            }
         }
 
-        public void SetCurrentPlayer()
+        public void SetCurrentPlayer(IPlayer player)
         {
-            throw new System.NotImplementedException();
+            _currentGamePlayer = player;
         }
 
         public void PlayMove(char mark, Coordinates coordinates)
@@ -47,19 +56,24 @@ namespace TicTacToe
             return _ticTacToeBoard.GetPlayedCells().Count == _ticTacToeBoard.GetBoardSize() * _ticTacToeBoard.GetBoardSize() *  _ticTacToeBoard.GetBoardSize();
         }
 
-        public void GetWinner()
+        public IPlayer GetWinner()
         {
-            throw new System.NotImplementedException();
+            return _ticTacToeRules.HasWinner(_ticTacToeBoard)? _gamePlayers.First(gamePlayer => gamePlayer.GetPlayerMark() == _ticTacToeBoard.GetPlayedCells().Last().State) : null;
         }
 
         public void EndGame()
         {
-            throw new System.NotImplementedException();
+            _gameStatus = GameStatus.OVER;
         }
 
         public ITicTacToeBoard GetGameBoard()
         {
             return _ticTacToeBoard;
+        }
+
+        public List<IPlayer> GetGamePlayers()
+        {
+            return _gamePlayers;
         }
     }
 }

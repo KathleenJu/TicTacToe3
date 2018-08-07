@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Moq;
 using Xunit;
 
 namespace TicTacToe.Tests
@@ -67,6 +68,19 @@ namespace TicTacToe.Tests
             var hasWinner = game.IsGameOver();
             
             Assert.True(hasWinner);
+        }
+        
+        [Fact]
+        public void AddPlayerToGameIfMarkHasntBeenTakenByAnotherPlayer()
+        {
+            var game = new TicTacToeGame();
+            var computerPlayer = new ComputerPlayer();
+            game.AddPlayersToGame(computerPlayer);
+            computerPlayer.SetPlayerMark();
+            var computerPlayerMark = computerPlayer.GetPlayerMark();
+            
+            var foo = game.GetGamePlayers().Any(player => player.GetPlayerMark() == computerPlayerMark);
+            Assert.True(foo);
         }
     }
 }
