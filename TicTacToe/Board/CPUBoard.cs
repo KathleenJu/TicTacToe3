@@ -6,10 +6,9 @@ namespace TicTacToe
 {
     public class CPUBoard : IBoard
     {
-        public int BoardSize { get; }
+        private readonly int BoardSize;
         private readonly List<Cell> _playedCells;
         public IEnumerable<Cell> PlayedCells => _playedCells;
-
 
         public CPUBoard()
         {
@@ -54,14 +53,12 @@ namespace TicTacToe
 
         public int GetBoardSize()
         {
-            throw new System.NotImplementedException();
+            return BoardSize;
         }
 
         public List<Cell> GetPlayedCells()
         {
-            throw new System.NotImplementedException();
+            return _playedCells;
         }
-
-        //getboardsize, getPlayedCells
     }
 }
