@@ -13,10 +13,15 @@ namespace TicTacToe.Tests
         public void UpdatesBoardIfPositionIsValidAndNotOccupied(int row, int column, int depth)
         {
             var board = new TicTacToeCPUBoard(3);
-            var playerMove = new Cell('X', new Coordinates(row, column, depth));
-            board.UpdateBoard(playerMove);
-            var boardUpdated = board.GetPlayedCells().Contains(playerMove);
-            
+            var coordinates = new Coordinates(row, column, depth);
+            var playerMove = new Cell('X', coordinates);
+            board.UpdateBoard('X', coordinates);
+            var boardUpdated = board.GetPlayedCells().Any(cell =>
+                cell.State == playerMove.State && cell.Coordinates.Row == playerMove.Coordinates.Row &&
+                cell.Coordinates.Column == playerMove.Coordinates.Column &&
+                cell.Coordinates.Depth == playerMove.Coordinates.Depth);
+
+            Assert.NotNull(board.GetPlayedCells());
             Assert.True(boardUpdated);
         }
 
@@ -28,10 +33,9 @@ namespace TicTacToe.Tests
 
         {
             var board = new TicTacToeCPUBoard(3);
-            var playerMove = new Cell('X', new Coordinates(row, column, depth));
-            board.UpdateBoard(playerMove);
+            board.UpdateBoard('X', new Coordinates(row, column, depth));
 
-            Assert.Throws<BoardPositionIsOccupiedException>(() => board.UpdateBoard(playerMove));
+            Assert.Throws<BoardPositionIsOccupiedException>(() => board.UpdateBoard('X', new Coordinates(row, column, depth)));
         }
 
         [Theory]
@@ -41,10 +45,8 @@ namespace TicTacToe.Tests
         public void ReturnExceptionIfCoordinatesIsOutOfBounds(int row, int column, int depth)
         {
             var board = new TicTacToeCPUBoard(3);
-            var playerMove = new Cell('X', new Coordinates(row, column, depth));
-            board.UpdateBoard(playerMove);
 
-            Assert.Throws<BoardPositionIsOccupiedException>(() => board.UpdateBoard(playerMove));
+            Assert.Throws<CoordinateIsOutOfBoundsException>(() => board.UpdateBoard('X', new Coordinates(row, column, depth)));
         }
     }
 }

@@ -5,7 +5,7 @@
         void StartGame();
         void AddPlayersToGame();
         void SetCurrentPlayer();
-        void PlayMove();
+        void PlayMove(char mark, Coordinates coordinates);
         void IsGameOver();
         void GetWinner();
         void EndGame();

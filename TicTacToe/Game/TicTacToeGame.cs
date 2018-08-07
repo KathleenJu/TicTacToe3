@@ -32,9 +32,9 @@ namespace TicTacToe
             throw new System.NotImplementedException();
         }
 
-        public void PlayMove()
+        public void PlayMove(char mark, Coordinates coordinates)
         {
-            throw new System.NotImplementedException();
+            _ticTacToeBoard.UpdateBoard(mark, coordinates);
         }
 
         public void IsGameOver()
@@ -50,6 +50,11 @@ namespace TicTacToe
         public void EndGame()
         {
             throw new System.NotImplementedException();
+        }
+
+        public ITicTacToeBoard GetGameBoard()
+        {
+            return _ticTacToeBoard;
         }
     }
 }

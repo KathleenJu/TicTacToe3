@@ -12,9 +12,9 @@ namespace TicTacToe.Tests
         public void ReturnWinnerWhenThereIsAWinningRowWithSameDepth(int row, int depth)
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(row, 0, depth)));
-            board.UpdateBoard(new Cell('X', new Coordinates(row, 2, depth)));
-            board.UpdateBoard(new Cell('X', new Coordinates(row, 1, depth)));
+            board.UpdateBoard('X', new Coordinates(row, 0, depth));
+            board.UpdateBoard('X', new Coordinates(row, 2, depth));
+            board.UpdateBoard('X', new Coordinates(row, 1, depth));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -25,9 +25,9 @@ namespace TicTacToe.Tests
         public void ReturnFalseWhenThereIsNoWinningRow()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(2, 0, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(2, 2, 0)));
-            board.UpdateBoard(new Cell('X', new Coordinates(2, 1, 2)));
+            board.UpdateBoard('X', new Coordinates(2, 0, 1));
+            board.UpdateBoard('X', new Coordinates(2, 2, 0));
+            board.UpdateBoard('X', new Coordinates(2, 1, 2));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -41,9 +41,9 @@ namespace TicTacToe.Tests
         public void ReturnWinnerWhenThereIsAWinningColumn(int column, int depth)
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(1, column, depth)));
-            board.UpdateBoard(new Cell('X', new Coordinates(0, column, depth)));
-            board.UpdateBoard(new Cell('X', new Coordinates(2, column, depth)));
+            board.UpdateBoard('X', new Coordinates(1, column, depth));
+            board.UpdateBoard('X', new Coordinates(0, column, depth));
+            board.UpdateBoard('X', new Coordinates(2, column, depth));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -54,9 +54,9 @@ namespace TicTacToe.Tests
         public void ReturnFalseWhenThereIsNoWinningColumn()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(0, 2, 0)));
-            board.UpdateBoard(new Cell('X', new Coordinates(2, 2, 1)));
+            board.UpdateBoard('X', new Coordinates(1, 2, 1));
+            board.UpdateBoard('X', new Coordinates(0, 2, 0));
+            board.UpdateBoard('X', new Coordinates(2, 2, 1));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -67,9 +67,9 @@ namespace TicTacToe.Tests
         public void ReturnWinnerWhenThereIsAWinningDepth()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 0)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 2)));
+            board.UpdateBoard('X', new Coordinates(1, 2, 0));
+            board.UpdateBoard('X', new Coordinates(1, 2, 1));
+            board.UpdateBoard('X', new Coordinates(1, 2, 2));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -80,9 +80,9 @@ namespace TicTacToe.Tests
         public void ReturnFalseWhenThereIsNoWinningDepth()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 0)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 0, 2)));
+            board.UpdateBoard('X', new Coordinates(1, 1, 0));
+            board.UpdateBoard('X', new Coordinates(1, 2, 1));
+            board.UpdateBoard('X', new Coordinates(1, 0, 2));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -94,9 +94,9 @@ namespace TicTacToe.Tests
         public void ReturnTrueWhenThereIsAWinningVerticalPrimaryDiagonalLine()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(0, 0, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(2, 2, 1)));
+            board.UpdateBoard('X', new Coordinates(0, 0, 1));
+            board.UpdateBoard('X', new Coordinates(1, 1, 1));
+            board.UpdateBoard('X', new Coordinates(2, 2, 1));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -107,9 +107,9 @@ namespace TicTacToe.Tests
         public void ReturnFalseWhenThereIsNoWinningVerticalPrimaryDiagonalLine()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(0, 0, 0)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(2, 2, 1)));
+            board.UpdateBoard('X', new Coordinates(0, 0, 0));
+            board.UpdateBoard('X', new Coordinates(1, 1, 1));
+            board.UpdateBoard('X', new Coordinates(2, 2, 1));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -120,9 +120,9 @@ namespace TicTacToe.Tests
         public void ReturnTrueWhenThereIsAWinningVerticalSecondaryDiagonalLine()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(0, 2, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(2, 0, 1)));
+            board.UpdateBoard('X', new Coordinates(0, 2, 1));
+            board.UpdateBoard('X', new Coordinates(1, 1, 1));
+            board.UpdateBoard('X', new Coordinates(2, 0, 1));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -133,9 +133,9 @@ namespace TicTacToe.Tests
         public void ReturnFalseWhenThereIsNoWinningVerticalSecondaryDiagonalLine()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(0, 2, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 2)));
-            board.UpdateBoard(new Cell('X', new Coordinates(2, 0, 1)));
+            board.UpdateBoard('X', new Coordinates(0, 2, 1));
+            board.UpdateBoard('X', new Coordinates(1, 1, 2));
+            board.UpdateBoard('X', new Coordinates(2, 0, 1));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -146,9 +146,9 @@ namespace TicTacToe.Tests
         public void ReturnTrueWhenThereIsAWinningHorizontalPrimaryDiagonalLine()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 0, 2)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 0)));
+            board.UpdateBoard('X', new Coordinates(1, 0, 2));
+            board.UpdateBoard('X', new Coordinates(1, 1, 1));
+            board.UpdateBoard('X', new Coordinates(1, 2, 0));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -159,9 +159,9 @@ namespace TicTacToe.Tests
         public void ReturnFalseWhenThereIsNoWinningHorizontalPrimaryDiagonalLine()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 0, 0)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 0)));
+            board.UpdateBoard('X', new Coordinates(1, 0, 0));
+            board.UpdateBoard('X', new Coordinates(1, 1, 1));
+            board.UpdateBoard('X', new Coordinates(1, 2, 0));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -172,9 +172,9 @@ namespace TicTacToe.Tests
         public void ReturnTrueWhenThereIsAWinningHorizontalSecondaryDiagonalLine()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 0, 0)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 2)));
+            board.UpdateBoard('X', new Coordinates(1, 0, 0));
+            board.UpdateBoard('X', new Coordinates(1, 1, 1));
+            board.UpdateBoard('X', new Coordinates(1, 2, 2));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -185,9 +185,9 @@ namespace TicTacToe.Tests
         public void ReturnFalseWhenThereIsNoWinningHorizontalSecondaryDiagonalLine()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard(new Cell('X', new Coordinates(0, 0, 0)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
-            board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 2)));
+            board.UpdateBoard('X', new Coordinates(0, 0, 0));
+            board.UpdateBoard('X', new Coordinates(1, 1, 1));
+            board.UpdateBoard('X', new Coordinates(1, 2, 2));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
