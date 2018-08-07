@@ -24,5 +24,15 @@
             var playerMove = Renderer.GetCoordinates(Id);
             return playerMove;
         }
+
+        public int GetPlayerId()
+        {
+            return Id;
+        }
+
+        public char GetPlayerMark()
+        {
+            return Mark;
+        }
     }
 }

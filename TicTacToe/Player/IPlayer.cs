@@ -4,5 +4,7 @@
     {
         void SetPlayerMark();
         Coordinates GetPlayerMove();
+        int GetPlayerId();
+        char GetPlayerMark();
     }
 }
