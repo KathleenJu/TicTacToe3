@@ -2,7 +2,7 @@
 
 namespace TicTacToe
 {
-    public interface IPlayerDisplayInterface : IDisplayInterface
+    public interface IPlayerRenderer : IRenderer
     {
         Coordinates GetCoordinates(int playerId);
         char GetMark();

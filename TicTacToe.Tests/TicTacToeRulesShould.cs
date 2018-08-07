@@ -11,7 +11,7 @@ namespace TicTacToe.Tests
         [InlineData(0, 0)]
         public void ReturnWinnerWhenThereIsAWinningRowWithSameDepth(int row, int depth)
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(row, 0, depth)));
             board.UpdateBoard(new Cell('X', new Coordinates(row, 2, depth)));
             board.UpdateBoard(new Cell('X', new Coordinates(row, 1, depth)));
@@ -24,7 +24,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnFalseWhenThereIsNoWinningRow()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(2, 0, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(2, 2, 0)));
             board.UpdateBoard(new Cell('X', new Coordinates(2, 1, 2)));
@@ -40,7 +40,7 @@ namespace TicTacToe.Tests
         [InlineData(0, 0)]
         public void ReturnWinnerWhenThereIsAWinningColumn(int column, int depth)
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(1, column, depth)));
             board.UpdateBoard(new Cell('X', new Coordinates(0, column, depth)));
             board.UpdateBoard(new Cell('X', new Coordinates(2, column, depth)));
@@ -53,7 +53,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnFalseWhenThereIsNoWinningColumn()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(0, 2, 0)));
             board.UpdateBoard(new Cell('X', new Coordinates(2, 2, 1)));
@@ -66,7 +66,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnWinnerWhenThereIsAWinningDepth()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 0)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 2)));
@@ -79,7 +79,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnFalseWhenThereIsNoWinningDepth()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 0)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 0, 2)));
@@ -93,7 +93,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnTrueWhenThereIsAWinningVerticalPrimaryDiagonalLine()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(0, 0, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(2, 2, 1)));
@@ -106,7 +106,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnFalseWhenThereIsNoWinningVerticalPrimaryDiagonalLine()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(0, 0, 0)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(2, 2, 1)));
@@ -119,7 +119,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnTrueWhenThereIsAWinningVerticalSecondaryDiagonalLine()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(0, 2, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(2, 0, 1)));
@@ -132,7 +132,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnFalseWhenThereIsNoWinningVerticalSecondaryDiagonalLine()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(0, 2, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 2)));
             board.UpdateBoard(new Cell('X', new Coordinates(2, 0, 1)));
@@ -145,7 +145,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnTrueWhenThereIsAWinningHorizontalPrimaryDiagonalLine()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(1, 0, 2)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 0)));
@@ -158,7 +158,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnFalseWhenThereIsNoWinningHorizontalPrimaryDiagonalLine()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(1, 0, 0)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 0)));
@@ -171,7 +171,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnTrueWhenThereIsAWinningHorizontalSecondaryDiagonalLine()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(1, 0, 0)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 2)));
@@ -184,7 +184,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnFalseWhenThereIsNoWinningHorizontalSecondaryDiagonalLine()
         {
-            var board = new CPUBoard(3);
+            var board = new TicTacToeCPUBoard(3);
             board.UpdateBoard(new Cell('X', new Coordinates(0, 0, 0)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 1, 1)));
             board.UpdateBoard(new Cell('X', new Coordinates(1, 2, 2)));

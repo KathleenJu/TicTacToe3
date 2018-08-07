@@ -1,6 +1,6 @@
 ﻿namespace TicTacToe
 {
-    public interface IDisplayInterface
+    public interface IRenderer
     {
         void DisplayMessage(string message); 
         string GetInput();

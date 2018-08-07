@@ -5,20 +5,21 @@ namespace TicTacToe
 {
     public class TicTacToeGame : IGame
     {
-        private readonly IGameRules GameRules;
-        private readonly IBoard GameBoard;
-        private readonly List<IPlayer> GamePlayers;
-        private readonly IPlayer CurrentGamePlayer;
-        private readonly GameStatus GameStatus;
+        private readonly ITicTacToeRules _ticTacToeRules;
+        private readonly ITicTacToeBoard _ticTacToeBoard;
+        private List<IPlayer> _gamePlayers;
+        private IPlayer _currentGamePlayer;
+        private GameStatus _gameStatus;
          
         public TicTacToeGame()
         {
-           
+            _ticTacToeRules = new TicTacToeRules();
+            _ticTacToeBoard = new TicTacToeCPUBoard();
         }
 
         public void StartGame()
         {
-            throw new System.NotImplementedException();
+            _gameStatus = GameStatus.PLAYING;
         }
 
         public void AddPlayersToGame()

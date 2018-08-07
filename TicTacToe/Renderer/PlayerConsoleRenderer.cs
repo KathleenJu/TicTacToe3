@@ -4,7 +4,7 @@ using TicTacToe.Exceptions;
 
 namespace TicTacToe
 {
-    public class PlayerConsoleInterface : IPlayerDisplayInterface
+    public class PlayerConsoleRenderer : IPlayerRenderer
     {
         public void DisplayMessage(string message)
         {
@@ -27,8 +27,7 @@ namespace TicTacToe
                 var row = int.Parse(input.Split(',')[0]) - 1;
                 var column = int.Parse(input.Split(',')[1]) - 1;
                 var depth = int.Parse(input.Split(',')[2]) - 1;
-                var playerCoordinates = new Coordinates(row, column, depth);
-                return playerCoordinates;
+                return new Coordinates(row, column, depth);
             }
 
             throw new InvalidCoordinateException("Wrong coordination format. Try again in x,y,z format e.g. 1,1,2 \n");

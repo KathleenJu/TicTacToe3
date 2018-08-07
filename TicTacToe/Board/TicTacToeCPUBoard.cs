@@ -4,19 +4,19 @@ using TicTacToe.Exceptions;
 
 namespace TicTacToe
 {
-    public class CPUBoard : IBoard
+    public class TicTacToeCPUBoard : ITicTacToeBoard
     {
         private readonly int BoardSize;
         private readonly List<Cell> _playedCells;
         public IEnumerable<Cell> PlayedCells => _playedCells;
 
-        public CPUBoard()
+        public TicTacToeCPUBoard()
         {
             BoardSize = 3;
             _playedCells = new List<Cell>();
         }
 
-        public CPUBoard(int boardSize) : this()
+        public TicTacToeCPUBoard(int boardSize) : this()
         {
             BoardSize = boardSize;
         }

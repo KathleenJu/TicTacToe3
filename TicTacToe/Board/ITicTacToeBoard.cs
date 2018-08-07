@@ -2,7 +2,7 @@
 
 namespace TicTacToe
 {
-    public interface IBoard
+    public interface ITicTacToeBoard
     {
         void UpdateBoard(Cell playerMove);
         bool IsEmptyPosition(Coordinates playerCoordinates);

@@ -12,10 +12,10 @@ namespace TicTacToe.Tests
         [InlineData(2, 0, 1)]
         public void UpdatesBoardIfPositionIsValidAndNotOccupied(int row, int column, int depth)
         {
-            var board = new CPUBoard(3);
-            var playerMove = new Cell('X', new Coordinates(1, 1, 1));
+            var board = new TicTacToeCPUBoard(3);
+            var playerMove = new Cell('X', new Coordinates(row, column, depth));
             board.UpdateBoard(playerMove);
-            var boardUpdated = board.PlayedCells.Contains(playerMove);
+            var boardUpdated = board.GetPlayedCells().Contains(playerMove);
             
             Assert.True(boardUpdated);
         }
@@ -27,8 +27,8 @@ namespace TicTacToe.Tests
         public void ReturnExceptionIfPositionIsOccupied(int row, int column, int depth)
 
         {
-            var board = new CPUBoard(3);
-            var playerMove = new Cell('X', new Coordinates(1, 1, 1));
+            var board = new TicTacToeCPUBoard(3);
+            var playerMove = new Cell('X', new Coordinates(row, column, depth));
             board.UpdateBoard(playerMove);
 
             Assert.Throws<BoardPositionIsOccupiedException>(() => board.UpdateBoard(playerMove));
@@ -40,8 +40,8 @@ namespace TicTacToe.Tests
         [InlineData(2, 4, 0)]
         public void ReturnExceptionIfCoordinatesIsOutOfBounds(int row, int column, int depth)
         {
-            var board = new CPUBoard(3);
-            var playerMove = new Cell('X', new Coordinates(1, 1, 1));
+            var board = new TicTacToeCPUBoard(3);
+            var playerMove = new Cell('X', new Coordinates(row, column, depth));
             board.UpdateBoard(playerMove);
 
             Assert.Throws<BoardPositionIsOccupiedException>(() => board.UpdateBoard(playerMove));

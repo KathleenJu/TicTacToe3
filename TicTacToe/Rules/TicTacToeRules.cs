@@ -3,14 +3,14 @@ using System.Linq;
 
 namespace TicTacToe.Rules
 {
-    public class TicTacToeRules: IGameRules
+    public class TicTacToeRules: ITicTacToeRules
     {
         private readonly int NumberOfSymbolsInALineToWin = 3;
 
-        public bool HasWinner(IBoard board)
+        public bool HasWinner(ITicTacToeBoard ticTacToeBoard)
         {
-            var lastPlayer = board.GetPlayedCells().Last().State;
-            var coordinates = board.GetPlayedCells().Where(move => move.State == lastPlayer)
+            var lastPlayer = ticTacToeBoard.GetPlayedCells().Last().State;
+            var coordinates = ticTacToeBoard.GetPlayedCells().Where(move => move.State == lastPlayer)
                 .Select(move => move.Coordinates)
                 .ToList();
             var hasWinningLine = new List<bool>

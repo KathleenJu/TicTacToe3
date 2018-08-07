@@ -4,25 +4,24 @@
     {
         public int Id { get; }
         public char Mark { get; private set; }
-        
-        public IPlayerDisplayInterface DisplayInterface;
+        public IPlayerRenderer Renderer;
 
-        public HumanPlayer(int id, IPlayerDisplayInterface displayInterface)
+        public HumanPlayer(int id, IPlayerRenderer renderer)
         {
             Id = id;
-            DisplayInterface = displayInterface;
+            Renderer = renderer;
         }
 
         public void SetPlayerMark() 
         {
-            DisplayInterface.DisplayMessage("Player " + Id + " pick your mark on the board e.g. X, O or A: ");
-            Mark = DisplayInterface.GetMark();
+            Renderer.DisplayMessage("Player " + Id + " pick your mark on the board e.g. X, O or A: ");
+            Mark = Renderer.GetMark();
         }
 
         public Coordinates GetPlayerMove()
         {
-            DisplayInterface.DisplayMessage("Player " + Id + " enter a coord x,y,z to place " + Mark + " or enter 'q' to give up: ");
-            var playerMove = DisplayInterface.GetCoordinates(Id);
+            Renderer.DisplayMessage("Player " + Id + " enter a coord x,y,z to place " + Mark + " or enter 'q' to give up: ");
+            var playerMove = Renderer.GetCoordinates(Id);
             return playerMove;
         }
     }
