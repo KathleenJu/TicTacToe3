@@ -24,25 +24,44 @@ namespace TicTacToe
 
         public void UpdateBoard(Cell playerMove)
         {
-            if (IsEmptyPosition(playerMove.Coordinates) && IsValidCoordinate(playerMove.Coordinates))
+            if (!IsEmptyPosition(playerMove.Coordinates))
             {
-                _playedCells.Add(playerMove);
+                throw new BoardPositionIsOccupiedException("Position is already occupied by" + playerMove.State);
             }
+
+            if (!IsValidCoordinate(playerMove.Coordinates))
+            {
+                throw new CoordinateIsOutOfBoundsException("Coordinate is out of bounds.");
+            }
+
+            _playedCells.Add(playerMove);
         }
 
         public bool IsEmptyPosition(Coordinates playerCoordinates)
         {
-            var position = _playedCells.Where(cell => cell.Coordinates.Row == playerCoordinates.Row && cell.Coordinates.Column == playerCoordinates.Column &&
+            var position = _playedCells.Where(cell =>
+                cell.Coordinates.Row == playerCoordinates.Row && cell.Coordinates.Column == playerCoordinates.Column &&
                 cell.Coordinates.Depth == playerCoordinates.Depth);
 
-            return !position.Any() ? true : throw new BoardPositionIsOccupiedException("Position is already occupied by " + position.Select(c => c.State));
+            return !position.Any();
         }
 
         public bool IsValidCoordinate(Coordinates coordinates)
         {
-            var isValidCoordinate = coordinates.Row < BoardSize && coordinates.Row >= 0 && coordinates.Column < BoardSize &&
-                                    coordinates.Column >= 0;
-            return isValidCoordinate? true : throw new CoordinateIsOutOfBoundsException("Coordinate is out of bounds.");
+            return coordinates.Row < BoardSize && coordinates.Row >= 0 && coordinates.Column < BoardSize &&
+                   coordinates.Column >= 0;
         }
+
+        public int GetBoardSize()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<Cell> GetPlayedCells()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        //getboardsize, getPlayedCells
     }
 }
