@@ -37,9 +37,14 @@ namespace TicTacToe
             _ticTacToeBoard.UpdateBoard(mark, coordinates);
         }
 
-        public void IsGameOver()
+        public bool IsGameOver()
         {
-            throw new System.NotImplementedException();
+            return _ticTacToeRules.HasWinner(_ticTacToeBoard) || IsDrawGame();
+        }
+
+        private bool IsDrawGame()
+        {
+            return _ticTacToeBoard.GetPlayedCells().Count == _ticTacToeBoard.GetBoardSize() * _ticTacToeBoard.GetBoardSize() *  _ticTacToeBoard.GetBoardSize();
         }
 
         public void GetWinner()

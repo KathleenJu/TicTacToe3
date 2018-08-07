@@ -6,7 +6,7 @@
         void AddPlayersToGame();
         void SetCurrentPlayer();
         void PlayMove(char mark, Coordinates coordinates);
-        void IsGameOver();
+        bool IsGameOver();
         void GetWinner();
         void EndGame();
     }
