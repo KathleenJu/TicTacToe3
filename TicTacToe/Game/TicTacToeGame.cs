@@ -11,7 +11,7 @@ namespace TicTacToe
         private readonly List<IPlayer> _gamePlayers;
         private IPlayer _currentGamePlayer;
         private GameStatus _gameStatus;
-         
+
         public TicTacToeGame()
         {
             _ticTacToeRules = new TicTacToeRules();
@@ -24,7 +24,7 @@ namespace TicTacToe
             _gameStatus = GameStatus.PLAYING;
         }
 
-        public void AddPlayersToGame(IPlayer player)
+        public void AddPlayerToGame(IPlayer player)
         {
             if (!_gamePlayers.Any(gamePlayer => gamePlayer.GetPlayerMark() == player.GetPlayerMark()))
             {
@@ -74,6 +74,16 @@ namespace TicTacToe
         public List<IPlayer> GetGamePlayers()
         {
             return _gamePlayers;
+        }
+
+        public IPlayer GetCurrentGamePlayer()
+        {
+            return _currentGamePlayer;
+        }
+
+        public GameStatus GetGameStatus()
+        {
+            return _gameStatus;
         }
     }
 }

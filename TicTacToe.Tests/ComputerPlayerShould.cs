@@ -1,3 +1,4 @@
+using Moq;
 using Xunit;
 
 namespace TicTacToe.Tests
@@ -7,7 +8,7 @@ namespace TicTacToe.Tests
         [Fact]
         public void ReturnTheComputerPlayerMark()
         {
-            var player = new ComputerPlayer();
+            var player = new ComputerPlayer(It.IsAny<int>());
             player.SetPlayerMark();
             
             Assert.NotNull(player.Mark);
@@ -16,7 +17,7 @@ namespace TicTacToe.Tests
        [Fact] 
         public void ReturnTheComputerPlayerMove()
         {
-            var player = new ComputerPlayer();
+            var player = new ComputerPlayer(It.IsAny<int>());
             var coord = player.GetPlayerMove();
             
             Assert.NotNull(coord);

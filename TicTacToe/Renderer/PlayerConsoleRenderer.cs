@@ -6,7 +6,7 @@ namespace TicTacToe
 {
     public class PlayerConsoleRenderer : IPlayerRenderer
     {
-        public void DisplayMessage(string message)
+        public void RenderMessage(string message)
         {
             Console.Write(message);
         }
@@ -48,7 +48,7 @@ namespace TicTacToe
                 input = GetInput();
             }
 
-            return mark;
+            return char.ToUpper(mark);
         }
     }
 }

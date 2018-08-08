@@ -75,12 +75,12 @@ namespace TicTacToe.Tests
         {
             var game = new TicTacToeGame();
             var computerPlayer = new ComputerPlayer();
-            game.AddPlayersToGame(computerPlayer);
+            game.AddPlayerToGame(computerPlayer);
             computerPlayer.SetPlayerMark();
             var computerPlayerMark = computerPlayer.GetPlayerMark();
-            
-            var foo = game.GetGamePlayers().Any(player => player.GetPlayerMark() == computerPlayerMark);
-            Assert.True(foo);
+
+            var hasMarkTakenByOtherPlayer = game.GetGamePlayers().Any(player => player.GetPlayerMark() == computerPlayerMark);
+            Assert.True(hasMarkTakenByOtherPlayer);
         }
     }
 }

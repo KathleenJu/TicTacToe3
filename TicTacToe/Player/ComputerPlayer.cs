@@ -7,6 +7,11 @@ namespace TicTacToe
         public int Id { get; }
         public char Mark { get; private set; }
         
+        public ComputerPlayer(int id)
+        {
+            Id = id;
+        }
+
         public void SetPlayerMark()
         {
             var random = new Random();

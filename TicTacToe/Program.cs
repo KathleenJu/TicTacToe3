@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using TicTacToe.Exceptions;
 
 namespace TicTacToe
 {
@@ -6,7 +8,11 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var tictactoeGame = new TicTacToeGame();
+            var renderer =  new GameConsoleRenderer();
+            var gameRender = new GameRender(tictactoeGame, renderer);
+            
+            gameRender.PlayGame();
         }
     }
 }
