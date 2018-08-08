@@ -10,9 +10,10 @@
         {
             Id = id;
             Renderer = renderer;
+            SetPlayerMark();
         }
 
-        public void SetPlayerMark() 
+        private void SetPlayerMark() 
         {
             Renderer.RenderMessage("Player " + Id + " pick your mark on the board e.g. X, O or A: ");
             Mark = Renderer.GetMark();

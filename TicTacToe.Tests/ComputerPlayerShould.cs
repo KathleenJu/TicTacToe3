@@ -9,7 +9,6 @@ namespace TicTacToe.Tests
         public void ReturnTheComputerPlayerMark()
         {
             var player = new ComputerPlayer(It.IsAny<int>());
-            player.SetPlayerMark();
             
             Assert.NotNull(player.Mark);
         }

@@ -10,13 +10,14 @@ namespace TicTacToe
         public ComputerPlayer(int id)
         {
             Id = id;
+            SetPlayerMark();
         }
 
-        public void SetPlayerMark()
+        private void SetPlayerMark()
         {
             var random = new Random();
-            int num = random.Next(0, 26); // Zero to 25
-            char mark = (char)('a' + num);
+            var num = random.Next(0, 26); // Zero to 25
+            var mark = (char)('a' + num);
             Mark = mark;
         }
 

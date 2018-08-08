@@ -32,7 +32,7 @@ namespace TicTacToe
             }
             else
             {
-                throw new System.Exception("Mark is already taken by another player. ");
+                throw new System.Exception("Mark is already taken by another player. \n");
             }
         }
 

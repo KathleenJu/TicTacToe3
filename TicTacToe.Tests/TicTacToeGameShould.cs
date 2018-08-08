@@ -74,7 +74,7 @@ namespace TicTacToe.Tests
         public void AddPlayerToGameIfMarkHasntBeenTakenByAnotherPlayer()
         {
             var game = new TicTacToeGame();
-            var computerPlayer = new ComputerPlayer();
+            var computerPlayer = new ComputerPlayer(1);
             game.AddPlayerToGame(computerPlayer);
             computerPlayer.SetPlayerMark();
             var computerPlayerMark = computerPlayer.GetPlayerMark();

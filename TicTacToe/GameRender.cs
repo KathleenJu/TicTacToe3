@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using TicTacToe.Exceptions;
 
@@ -22,48 +23,79 @@ namespace TicTacToe
             Renderer.RenderMessage("Here's the current board: \n");
             Renderer.RenderGameBoard(Game.GetGameBoard());
 
-            var player1 = new HumanPlayer(1, new PlayerConsoleRenderer());
-            player1.SetPlayerMark();
-            Game.AddPlayerToGame(player1);
-            var player2 = new ComputerPlayer(2);
-            player2.SetPlayerMark();
-            Game.AddPlayerToGame(player2);
-            Game.SetCurrentPlayer(player1);
+            SetPlayers();
 
             while (Game.GetGameStatus() != GameStatus.OVER)
             {
                 try
                 {
-                    Game.PlayMove(Game.GetCurrentGamePlayer().GetPlayerMark(), Game.GetCurrentGamePlayer().GetPlayerMove());
+                    var playerMove = Game.GetCurrentGamePlayer().GetPlayerMove();
+                    Game.PlayMove(Game.GetCurrentGamePlayer().GetPlayerMark(), playerMove);
+
+                    Renderer.RenderMessage("Move accepted, here's the current board: \n");
+                    Renderer.RenderGameBoard(Game.GetGameBoard());
+                    if (Game.IsGameOver())
+                    {
+                        Game.EndGame();
+                        Renderer.RenderWinner(Game.GetWinner());
+                    }
+
+                    var newCurrentPlayer = Game.GetGamePlayers().Where(player => player != Game.GetCurrentGamePlayer())
+                        .Select(player => player).First();
+                    Game.SetCurrentPlayer(newCurrentPlayer);
                 }
                 catch (BoardPositionIsOccupiedException ex)
                 {
                     Renderer.RenderMessage(ex.Message);
-                    break;
                 }
                 catch (CoordinateIsOutOfBoundsException ex)
                 {
                     Renderer.RenderMessage(ex.Message);
-                    break;
                 }
                 catch (QuitGameException ex)
                 {
                     Renderer.RenderMessage(ex.Message);
                     return;
                 }
-
-                Renderer.RenderMessage("Move accepted, here's the current board: \n");
-                Renderer.RenderGameBoard(Game.GetGameBoard());
-                if (Game.IsGameOver())
-                {
-                    Game.EndGame();
-                    Renderer.RenderWinner(Game.GetWinner());
-                }
-
-                var newCurrentPlayer = Game.GetGamePlayers().Where(player => player != Game.GetCurrentGamePlayer())
-                    .Select(player => player).First();
-                Game.SetCurrentPlayer(newCurrentPlayer);
             }
+        }
+
+        private void SetPlayers()
+        {
+            var numberOfHumanPlayers = GetNumberOfPlayers("human");
+            var numberOfComputerPlayers = GetNumberOfPlayers("computer");
+            if (numberOfHumanPlayers != 0)
+            {
+                for (var i = 1; i <= numberOfHumanPlayers; i++)
+                {
+                    var humanPlayer = new HumanPlayer(i, new PlayerConsoleRenderer());
+                    Game.AddPlayerToGame(humanPlayer);
+                    
+                }
+            }
+            if (numberOfComputerPlayers != 0)
+            {
+                for (var i = 1; i <= numberOfComputerPlayers + 1; i++)
+                {
+                    var computerPlayer = new ComputerPlayer(i);
+                    Game.AddPlayerToGame(computerPlayer);
+                }
+            }
+            Game.SetCurrentPlayer(Game.GetGamePlayers().First());
+        }
+
+        public int GetNumberOfPlayers(string typeOfPlayer)
+        {
+            Renderer.RenderMessage("Please type in the number of " + typeOfPlayer + " players: ");
+            var input = Renderer.GetInput();
+            int numberOfPlayer;
+            while (!int.TryParse(input, out numberOfPlayer))
+            {
+                Renderer.RenderMessage("Invalid number. Please type in a number: ");
+                input = Console.ReadLine();
+            }
+
+            return numberOfPlayer;
         }
     }
 }

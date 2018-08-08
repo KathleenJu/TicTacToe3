@@ -24,12 +24,12 @@ namespace TicTacToe
         {
             if (!IsEmptyPosition(coordinates))
             {
-                throw new BoardPositionIsOccupiedException("Position is already occupied by " + mark);
+                throw new BoardPositionIsOccupiedException("Position is already occupied by " + mark + "\n");
             }
 
             if (!IsValidCoordinate(coordinates))
             {
-                throw new CoordinateIsOutOfBoundsException("Coordinate is out of bounds.");
+                throw new CoordinateIsOutOfBoundsException("Coordinate is out of bounds. \n");
             }
 
             var cell = new Cell(mark, coordinates);
