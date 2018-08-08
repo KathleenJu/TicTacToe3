@@ -40,8 +40,9 @@ namespace TicTacToe
                         Renderer.RenderWinner(Game.GetWinner());
                     }
 
-                    var newCurrentPlayer = Game.GetGamePlayers().Where(player => player != Game.GetCurrentGamePlayer())
-                        .Select(player => player).First();
+                    var newCurrentPlayer =
+                        Game.GetGamePlayers().SkipWhile(gamePlayers => gamePlayers != Game.GetCurrentGamePlayer())
+                            .Skip(1).FirstOrDefault() ?? Game.GetGamePlayers().First();
                     Game.SetCurrentPlayer(newCurrentPlayer);
                 }
                 catch (BoardPositionIsOccupiedException ex)
@@ -75,7 +76,7 @@ namespace TicTacToe
             }
             if (numberOfComputerPlayers != 0)
             {
-                for (var i = 1; i <= numberOfComputerPlayers + 1; i++)
+                for (var i = 1; i <= numberOfComputerPlayers ; i++)
                 {
                     var computerPlayer = new ComputerPlayer(i);
                     Game.AddPlayerToGame(computerPlayer);
