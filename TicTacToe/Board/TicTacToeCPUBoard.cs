@@ -20,19 +20,22 @@ namespace TicTacToe
             _boardSize = boardSize;
         }
 
-        public void UpdateBoard(char mark, Coordinates coordinates)
+        public void UpdateBoard(char mark, Coordinates playerCoordinates)
         {
-            if (!IsEmptyPosition(coordinates))
+            if (!IsEmptyPosition(playerCoordinates))
             {
-                throw new BoardPositionIsOccupiedException("Position is already occupied by " + mark + "\n");
+                var markInOccupiedPosition = _playedCells.Where(c =>
+                    c.Coordinates.Row == playerCoordinates.Row && c.Coordinates.Column == playerCoordinates.Column &&
+                    c.Coordinates.Depth == playerCoordinates.Depth).Select(x => x.State).First();
+                throw new BoardPositionIsOccupiedException("Position is already occupied by " +  markInOccupiedPosition + ".\n");
             }
 
-            if (!IsValidCoordinate(coordinates))
+            if (!IsValidCoordinate(playerCoordinates))
             {
                 throw new CoordinateIsOutOfBoundsException("Coordinate is out of bounds. \n");
             }
 
-            var cell = new Cell(mark, coordinates);
+            var cell = new Cell(mark, playerCoordinates);
             _playedCells.Add(cell);
         }
 

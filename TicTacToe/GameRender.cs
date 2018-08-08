@@ -70,18 +70,35 @@ namespace TicTacToe
                 for (var i = 1; i <= numberOfHumanPlayers; i++)
                 {
                     var humanPlayer = new HumanPlayer(i, new PlayerConsoleRenderer());
-                    Game.AddPlayerToGame(humanPlayer);
-                    
+                    try
+                    {
+                        Game.AddPlayerToGame(humanPlayer);
+                    }
+                    catch (Exception ex)
+                    {
+                        Renderer.RenderMessage(ex.Message);
+                        i--;
+                    }
                 }
             }
+
             if (numberOfComputerPlayers != 0)
             {
-                for (var i = 1; i <= numberOfComputerPlayers ; i++)
+                for (var i = numberOfComputerPlayers + 1; i <= numberOfComputerPlayers; i++)
                 {
                     var computerPlayer = new ComputerPlayer(i);
-                    Game.AddPlayerToGame(computerPlayer);
+                    try
+                    {
+                        Game.AddPlayerToGame(computerPlayer);
+                    }
+                    catch (Exception ex)
+                    {
+                        Renderer.RenderMessage(ex.Message);
+                        i--;
+                    }
                 }
             }
+
             Game.SetCurrentPlayer(Game.GetGamePlayers().First());
         }
 

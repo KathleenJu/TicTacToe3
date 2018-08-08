@@ -4,7 +4,7 @@ namespace TicTacToe
 {
     public interface ITicTacToeBoard
     {
-        void UpdateBoard(char mark, Coordinates coordinates);
+        void UpdateBoard(char mark, Coordinates playerCoordinates);
         bool IsEmptyPosition(Coordinates playerCoordinates);
         bool IsValidCoordinate(Coordinates coordinates);
         int GetBoardSize();
