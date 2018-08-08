@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using TicTacToe.Exceptions;
 
 namespace TicTacToe
@@ -33,8 +34,7 @@ namespace TicTacToe
             {
                 try
                 {
-                    Game.PlayMove(Game.GetCurrentGamePlayer().GetPlayerMark(),
-                        Game.GetCurrentGamePlayer().GetPlayerMove());
+                    Game.PlayMove(Game.GetCurrentGamePlayer().GetPlayerMark(), Game.GetCurrentGamePlayer().GetPlayerMove());
                 }
                 catch (BoardPositionIsOccupiedException ex)
                 {
@@ -42,11 +42,6 @@ namespace TicTacToe
                     break;
                 }
                 catch (CoordinateIsOutOfBoundsException ex)
-                {
-                    Renderer.RenderMessage(ex.Message);
-                    break;
-                }
-                catch (InvalidCoordinateException ex)
                 {
                     Renderer.RenderMessage(ex.Message);
                     break;
