@@ -31,7 +31,8 @@ namespace TicTacToe
                 {
                     var playerMove = Game.GetCurrentGamePlayer().GetPlayerMove();
                     Game.PlayMove(Game.GetCurrentGamePlayer().GetPlayerMark(), playerMove);
-
+                    
+                    Renderer.RenderMessage("Player " + Game.GetCurrentGamePlayer().GetPlayerId() + " placed " + Game.GetCurrentGamePlayer().GetPlayerMark() + " at " + (playerMove.Row + 1) + "," + (playerMove.Column + 1) + "," + (playerMove.Depth + 1) +"\n");
                     Renderer.RenderMessage("Move accepted, here's the current board: \n");
                     Renderer.RenderGameBoard(Game.GetGameBoard());
                     if (Game.IsGameOver())
@@ -84,9 +85,9 @@ namespace TicTacToe
 
             if (numberOfComputerPlayers != 0)
             {
-                for (var i = numberOfComputerPlayers + 1; i <= numberOfComputerPlayers; i++)
+                for (var i = numberOfHumanPlayers + 1; i <= numberOfComputerPlayers + 1; i++)
                 {
-                    var computerPlayer = new ComputerPlayer(i);
+                    var computerPlayer = new ComputerPlayer(i, new PlayerConsoleRenderer());
                     try
                     {
                         Game.AddPlayerToGame(computerPlayer);
@@ -102,7 +103,7 @@ namespace TicTacToe
             Game.SetCurrentPlayer(Game.GetGamePlayers().First());
         }
 
-        public int GetNumberOfPlayers(string typeOfPlayer)
+        private int GetNumberOfPlayers(string typeOfPlayer)
         {
             Renderer.RenderMessage("Please type in the number of " + typeOfPlayer + " players: ");
             var input = Renderer.GetInput();

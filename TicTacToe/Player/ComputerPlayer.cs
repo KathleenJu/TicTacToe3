@@ -6,19 +6,19 @@ namespace TicTacToe
     {
         public int Id { get; }
         public char Mark { get; private set; }
+        private readonly IPlayerRenderer Renderer;
         
-        public ComputerPlayer(int id)
+        public ComputerPlayer(int id, IPlayerRenderer renderer)
         {
             Id = id;
+            Renderer = renderer;
             SetPlayerMark();
         }
 
         private void SetPlayerMark()
         {
-            var random = new Random();
-            var num = random.Next(0, 26); // Zero to 25
-            var mark = (char)('a' + num);
-            Mark = mark;
+            Renderer.RenderMessage("Pick a mark for computer player " + Id + ": ");
+            Mark = Renderer.GetMark();
         }
 
         public Coordinates GetPlayerMove()

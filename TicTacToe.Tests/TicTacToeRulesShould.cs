@@ -25,9 +25,9 @@ namespace TicTacToe.Tests
         public void ReturnFalseWhenThereIsNoWinningRow()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard('X', new Coordinates(2, 0, 1));
-            board.UpdateBoard('X', new Coordinates(2, 2, 0));
-            board.UpdateBoard('X', new Coordinates(2, 1, 2));
+            board.UpdateBoard('X', new Coordinates(0, 0, 0));
+            board.UpdateBoard('X', new Coordinates(0, 2, 0));
+            board.UpdateBoard('X', new Coordinates(0, 0, 1));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 
@@ -54,9 +54,9 @@ namespace TicTacToe.Tests
         public void ReturnFalseWhenThereIsNoWinningColumn()
         {
             var board = new TicTacToeCPUBoard(3);
-            board.UpdateBoard('X', new Coordinates(1, 2, 1));
-            board.UpdateBoard('X', new Coordinates(0, 2, 0));
-            board.UpdateBoard('X', new Coordinates(2, 2, 1));
+            board.UpdateBoard('X', new Coordinates(0, 0, 0));
+            board.UpdateBoard('X', new Coordinates(1, 0, 0));
+            board.UpdateBoard('X', new Coordinates(0, 0, 1));
             var rules = new TicTacToeRules();
             var hasWinner = rules.HasWinner(board);
 

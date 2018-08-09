@@ -41,7 +41,7 @@ namespace TicTacToe
             char mark;
             while (!char.TryParse(input, out mark))
             {
-                RenderMessage("Please type in a character for your mark on the board: ");
+                RenderMessage("Please type in a character for a mark on the board: ");
                 input = Console.ReadLine();
             }
 
