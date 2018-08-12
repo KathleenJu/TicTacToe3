@@ -85,7 +85,7 @@ namespace TicTacToe
 
             if (numberOfComputerPlayers != 0)
             {
-                for (var i = numberOfHumanPlayers + 1; i <= numberOfComputerPlayers + 1; i++)
+                for (var i = numberOfHumanPlayers + 1; i < numberOfComputerPlayers + 1; i++)
                 {
                     var computerPlayer = new ComputerPlayer(i, new PlayerConsoleRenderer());
                     try
