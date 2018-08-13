@@ -85,9 +85,10 @@ namespace TicTacToe
 
             if (numberOfComputerPlayers != 0)
             {
-                for (var i = numberOfHumanPlayers + 1; i < numberOfComputerPlayers + 2; i++)
+                numberOfHumanPlayers = numberOfHumanPlayers > 0?  numberOfHumanPlayers : numberOfHumanPlayers + 1 ;
+                for (var i = numberOfHumanPlayers; i <= numberOfComputerPlayers; i++)
                 {
-                    var computerPlayer = new ComputerPlayer(i, new PlayerConsoleRenderer());
+                    var computerPlayer = new ComputerPlayer(i + 1, new PlayerConsoleRenderer());
                     try
                     {
                         Game.AddPlayerToGame(computerPlayer);
